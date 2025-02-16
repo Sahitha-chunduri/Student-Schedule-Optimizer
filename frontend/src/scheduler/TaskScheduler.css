@@ -1,0 +1,178 @@
+.task-scheduler {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+  
+.container {
+    display: grid;
+    gap: 2rem;
+}
+  
+.section {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+  .section-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  
+  .add-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-input,
+  .form-select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .list-container {
+    margin-top: 1.5rem;
+  }
+  
+  .list-title {
+    color: #34495e;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .task-list,
+  .time-slot-list,
+  .schedule-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .task-item,
+  .time-slot-item,
+  .schedule-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-name {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .task-details,
+  .task-time {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .time-slot-day {
+    margin-bottom: 1.5rem;
+  }
+  
+  .day-title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .generate-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .generate-btn:hover:not(:disabled) {
+    background-color: #27ae60;
+  }
+  
+  .generate-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .generate-btn.loading {
+    background-color: #95a5a6;
+    cursor: wait;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .schedule-container {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .schedule-day {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .task-scheduler {
+      padding: 1rem;
+    }
+    
+    .add-form {
+      flex-direction: column;
+    }
+    
+    .form-input,
+    .form-select {
+      width: 100%;
+    }
+    
+    .task-item,
+    .time-slot-item,
+    .schedule-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
